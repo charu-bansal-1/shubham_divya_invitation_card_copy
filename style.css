@@ -551,7 +551,7 @@ body {
 .invite-card {
   position: relative;
   width: min(440px, 92vw);
-  padding: 56px 34px;
+  padding: 40px 32px;
   text-align: center;
   background: rgba(255, 250, 240, 0.6);
   border: 1px solid rgba(196, 156, 86, 0.5);
@@ -573,6 +573,24 @@ body {
 .card-corner.tr { top: 12px; right: 12px; transform: scaleX(-1); }
 .card-corner.bl { bottom: 12px; left: 12px; transform: scaleY(-1); }
 .card-corner.br { bottom: 12px; right: 12px; transform: scale(-1, -1); }
+
+.card-intro {
+  margin-bottom: 6px;
+}
+.card-intro-bless {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-size: clamp(1rem, 2.4vw, 1.2rem);
+  line-height: 1.6;
+  color: #8a5a2b;
+}
+.card-intro-text {
+  font-family: "EB Garamond", serif;
+  font-size: clamp(0.82rem, 1.9vw, 0.95rem);
+  line-height: 1.7;
+  color: #7a6a55;
+  margin-top: 12px;
+}
 
 .card-eyebrow {
   font-family: "Cinzel", serif;
@@ -599,7 +617,7 @@ body {
   font-style: italic;
   font-size: clamp(0.88rem, 2vw, 1rem);
   color: #7a6a55;
-  margin-bottom: 22px;
+  margin-bottom: 14px;
 }
 .card-line {
   font-family: "EB Garamond", serif;
@@ -627,7 +645,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 16px;
-  margin: 38px 0;
+  margin: 24px 0;
 }
 .card-amp-divider span {
   height: 1px;
@@ -649,7 +667,7 @@ body {
 }
 
 .card-blessing {
-  margin-top: 44px;
+  margin-top: 28px;
 }
 .star-divider {
   display: flex;
