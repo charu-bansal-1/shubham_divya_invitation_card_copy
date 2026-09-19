@@ -208,7 +208,7 @@ if (canvas) {
       if (data[i] === 0) clear++;
     }
     const total = data.length / (4 * 60);
-    if (clear / total > 0.35) {
+    if (clear / total > 0.22) {
       revealed = true;
       canvas.classList.add("revealed");
       celebrate();
