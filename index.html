@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=EB+Garamond:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Reusable gold paisley motif for card corners -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="paisley" viewBox="0 0 512 512">
+      <path d="M379.625 19.844c-16.74.187-34.18 4.942-50.22 13.625-12.754 6.905-24.542 16.552-34.28 28.5-1.217-1.252-2.578-2.38-3.72-3.69-47.612-54.672-125.46-43.178-160.75 1.345-5.91 4.88-9.686 12.268-9.686 20.53 0 14.692 11.9 26.595 26.593 26.595 14.69 0 26.625-11.903 26.625-26.594 0-10.035-5.578-18.75-13.782-23.28 31.8-23.023 82.904-25.36 116.906 13.687 2.22 2.546 4.53 4.972 6.938 7.312-11.28 19.99-17.145 44.58-13.906 72.78-12.262-16.69-31.758-28.007-55.094-27.5-12.29.27-25.64 3.807-39.563 11.564-60.394 33.638-37.274 103.51-153.375 103.686 47.213 28.976 95.146 41.69 136.938 41.844-14.583 71.33 33.297 162.234 146.813 212-55.354-96.272 18.237-128.528 44.906-186.063 60.407 9.56 105.242-59.912 134.374 53.5 27.68-154.03-86.917-220.388-158.53-211.937-14.422 1.703-26.155 7.967-34.94 17.094-7.646-30.47-3.774-55.575 6.563-75.25 27.31 19.926 61.414 29.575 90.313 29.47 18.49-.07 35.196-3.904 46.875-13.75 11.68-9.85 16.05-26.89 9.375-44.595-8.432-22.363-27.576-35.638-48.97-39.532-5.347-.974-10.825-1.407-16.405-1.344zm.22 18.718c4.457-.065 8.76.29 12.842 1.032 16.328 2.972 28.704 11.517 34.813 27.718 4.736 12.56 2.46 18.326-3.938 23.72-6.396 5.392-19.18 9.285-34.906 9.343-24.812.092-55.875-9.065-79.78-26.47 8.326-10.05 18.477-18.082 29.405-24 13.51-7.312 28.19-11.147 41.564-11.343zm-140.69 128.313c6.397.06 13.328.942 20.907 2.78-72.17 14.765-84.3 99.482-165.156 81.782 70.31-9.934 82.423-85.154 144.25-84.562zm34 19.5c52.567 110.048-67.184 156.03-9.967 257.563-84.856-93.86 23.175-138.69 9.968-257.563zm24.908 3.906c42.292 46.343 133.717-11.018 164.093 90-43.937-71.563-131.402-22.378-164.094-90z" />
+    </symbol>
+    <symbol id="lotusLeaf" viewBox="0 0 512 512">
+      <path d="M254.963 40.213c-37.634 31.356-62.038 67.976-77.916 109.394 8.544 12.5 16.607 25.44 24.228 38.594 15.642-5.553 32.468-8.587 49.995-8.587 17.886 0 35.046 3.156 50.96 8.93 9.07-14.52 18.652-28.856 28.89-42.66-15.736-38.504-39.406-74.025-76.157-105.67zM434.593 72.5c-46.74 28.5-83.334 74.49-114.616 123.826 21.934 11.372 40.696 28.023 54.636 48.244 23.212-22.514 48.206-44.643 75.58-66.82-.882-31.955-5.798-67.033-15.6-105.25zm-353.03 1.094c-9.435 37.96-14.433 72.695-15.74 104.27 23.62 20.078 45.453 40.406 65.78 61.603 13.77-18.29 31.614-33.345 52.194-43.774-28.336-48.245-62.472-92.77-102.234-122.1zm-54.59 96.7C9.708 278.34 31.295 358.165 72.27 411.517c22.427 29.2 50.77 50.62 82.128 64.363-20.892-35.934-25.973-76.777-16.613-116.112 4.668-19.617 12.848-38.864 24.274-57.09-38.14-48.11-82.083-90.01-135.087-132.383zm462.588.464c-59.87 45.918-108.408 90.682-151.36 138.615 9.625 17.744 16.24 36.16 19.722 54.732 7.08 37.78 1.012 76.134-18.31 109.926 32.2-14.254 62.005-35.988 86.51-65.214 44.98-53.64 72.394-132.675 63.44-238.058zM251.27 198.3c-44.09 0-83.025 21.667-106.764 54.954 9.898 10.856 19.428 21.973 28.64 33.42 18.55-24.415 43.224-46.48 73.372-64.422l5.072-3.02 4.906 3.286c30.383 20.345 54.374 44.323 71.65 70.185 10.638-11.774 21.61-23.376 33.012-34.85-23.354-35.875-63.803-59.552-109.888-59.552zm-.268 43.182c-51.58 32.272-84.19 77.032-95.035 122.612-10.94 45.97-.302 92.658 35.986 130.607h108.904c34.806-36.38 47.222-81.652 38.696-127.15-8.466-45.177-37.988-90.634-88.55-126.068z" />
+    </symbol>
+    <symbol id="lotusBloom" viewBox="0 0 256 256">
+      <path d="M245.83,121.63a15.53,15.53,0,0,0-9.52-7.33,73.51,73.51,0,0,0-22.17-2.22c4-19.85,1-35.55-2.06-44.86a16.15,16.15,0,0,0-18.79-10.88,85.53,85.53,0,0,0-28.55,12.12,94.58,94.58,0,0,0-27.11-33.25,16.05,16.05,0,0,0-19.26,0A94.48,94.48,0,0,0,91.26,68.46,85.53,85.53,0,0,0,62.71,56.34,16.15,16.15,0,0,0,43.92,67.22c-3,9.31-6,25-2.06,44.86a73.51,73.51,0,0,0-22.17,2.22,15.53,15.53,0,0,0-9.52,7.33,16,16,0,0,0-1.6,12.27c3.39,12.57,13.8,36.48,45.33,55.32S113.13,208,128.05,208s42.67,0,74-18.78c31.53-18.84,41.94-42.75,45.33-55.32A16,16,0,0,0,245.83,121.63ZM59.14,72.14a.2.2,0,0,1,.23-.15A70.43,70.43,0,0,1,85.18,83.66,118.65,118.65,0,0,0,80,119.17c0,18.74,3.77,34,9.11,46.28A123.59,123.59,0,0,1,69.57,140C51.55,108.62,55.3,84,59.14,72.14Zm3,103.35C35.47,159.57,26.82,140.05,24,129.7a59.82,59.82,0,0,1,22.5-1.17,129.08,129.08,0,0,0,9.15,19.41,142.28,142.28,0,0,0,34,39.56A114.92,114.92,0,0,1,62.1,175.49ZM128,190.4c-9.33-6.94-32-28.23-32-71.23C96,76.7,118.38,55.24,128,48c9.62,7.26,32,28.72,32,71.19C160,162.17,137.33,183.46,128,190.4ZM170.82,83.66A70.43,70.43,0,0,1,196.63,72a.2.2,0,0,1,.23.15C200.7,84,204.45,108.62,186.43,140a123.32,123.32,0,0,1-19.54,25.48c5.34-12.26,9.11-27.54,9.11-46.28A118.65,118.65,0,0,0,170.82,83.66ZM232,129.72c-2.77,10.25-11.4,29.81-38.09,45.77a114.92,114.92,0,0,1-27.55,12,142.28,142.28,0,0,0,34-39.56,129.08,129.08,0,0,0,9.15-19.41A59.69,59.69,0,0,1,232,129.71Z" />
+    </symbol>
+    <symbol id="butterflyShape" viewBox="0 0 100 100">
+      <g fill="currentColor">
+        <ellipse cx="31" cy="37" rx="23" ry="27" />
+        <ellipse cx="69" cy="37" rx="23" ry="27" />
+        <ellipse cx="35" cy="67" rx="17" ry="21" />
+        <ellipse cx="65" cy="67" rx="17" ry="21" />
+      </g>
+      <g fill="none" stroke="#7a3b32" stroke-width="1.6" stroke-linecap="round">
+        <path d="M50 28 C45 20 41 18 38 16" />
+        <path d="M50 28 C55 20 59 18 62 16" />
+      </g>
+      <rect x="48.4" y="27" width="3.2" height="46" rx="1.6" fill="#7a3b32" />
+    </symbol>
+    <symbol id="whiteFlower" viewBox="0 0 100 100">
+      <g fill="#fffdf8" stroke="rgba(196,156,86,0.25)" stroke-width="0.8">
+        <ellipse cx="50" cy="27" rx="12" ry="20" transform="rotate(0 50 50)" />
+        <ellipse cx="50" cy="27" rx="12" ry="20" transform="rotate(72 50 50)" />
+        <ellipse cx="50" cy="27" rx="12" ry="20" transform="rotate(144 50 50)" />
+        <ellipse cx="50" cy="27" rx="12" ry="20" transform="rotate(216 50 50)" />
+        <ellipse cx="50" cy="27" rx="12" ry="20" transform="rotate(288 50 50)" />
+      </g>
+      <circle cx="50" cy="50" r="8.5" fill="#eecb73" />
+      <circle cx="50" cy="50" r="4" fill="#d8ab4c" />
+    </symbol>
+    <symbol id="leafSm" viewBox="0 0 100 100">
+      <path d="M50 94 C22 72 22 30 50 6 C78 30 78 72 50 94 Z" fill="#9db77c" />
+      <path d="M50 12 L50 88" stroke="rgba(70,100,50,0.35)" stroke-width="2.4" fill="none" />
+    </symbol>
+  </svg>
+  <div class="stage">
+    <div class="intro" id="intro">
+      <!-- Ambient glow behind the doors -->
+      <div class="ambient"></div>
+
+      <!-- Left door -->
+      <div class="door door-left">
+        <div class="door-face"></div>
+        <div class="door-inner-frame"></div>
+        <div class="door-handle"></div>
+      </div>
+
+      <!-- Right door -->
+      <div class="door door-right">
+        <div class="door-face"></div>
+        <div class="door-inner-frame"></div>
+        <div class="door-handle"></div>
+      </div>
+
+      <!-- Decorative outer frame -->
+      <div class="ornate-frame"></div>
+
+      <!-- Center tap prompt -->
+      <div class="tap-prompt" id="tapPrompt">
+        <div class="tap-ring">
+          <div class="tap-ring-inner">
+            <span class="tap-text">TAP TO OPEN</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Content revealed after doors open -->
+    <div class="next-page" id="nextPage">
+      <!-- Fixed decorative floral corners -->
+      <img class="deco-corner tl" src="petal-scatter.webp" alt="" />
+      <img class="deco-corner br" src="bottom-right-bouquet.webp" alt="" />
+      <div class="butterfly b1"></div>
+      <div class="butterfly b2"></div>
+      <div class="butterfly b3"></div>
+
+      <div class="invite-scroll">
+
+        <!-- ===== Section 1: Ganesh Invocation ===== -->
+        <section class="section ganesh-section">
+          <div class="ganesh">
+            <img class="ganesh-icon" src="ganesha.webp" alt="Lord Ganesha" />
+          </div>
+          <div class="dot-divider"><i></i></div>
+          <p class="shlok">वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ।</p>
+          <p class="shlok">निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा॥</p>
+          <p class="shlok-by">— श्री गणेशाय नमः</p>
+          <button class="scroll-down" id="scrollDown" aria-label="Scroll down">
+            <span class="sd-text">Scroll</span>
+            <span class="sd-chevron"></span>
+          </button>
+        </section>
+
+        <!-- Lotus divider -->
+        <div class="lotus-divider">
+          <span class="ld-line"></span>
+          <div class="ld-icons">
+            <svg class="ld-leaf" viewBox="0 0 512 512"><use href="#lotusLeaf" /></svg>
+            <svg class="ld-bloom" viewBox="0 0 256 256"><use href="#lotusBloom" /></svg>
+            <svg class="ld-leaf" viewBox="0 0 512 512"><use href="#lotusLeaf" /></svg>
+          </div>
+          <span class="ld-line"></span>
+        </div>
+
+        <!-- ===== Section 2: Bride & Groom ===== -->
+        <section class="section couple-section">
+          <div class="invite-card">
+            <!-- Gold paisley corners -->
+            <svg class="card-corner tl" viewBox="0 0 512 512" aria-hidden="true"><use href="#paisley" /></svg>
+            <svg class="card-corner tr" viewBox="0 0 512 512" aria-hidden="true"><use href="#paisley" /></svg>
+            <svg class="card-corner bl" viewBox="0 0 512 512" aria-hidden="true"><use href="#paisley" /></svg>
+            <svg class="card-corner br" viewBox="0 0 512 512" aria-hidden="true"><use href="#paisley" /></svg>
+
+            <div class="person">
+              <p class="card-eyebrow">वर परिचय</p>
+              <h3 class="card-name">Shubham</h3>
+              <p class="card-role">The Groom</p>
+              <p class="card-line">S/o. Smt. Greema Bansal</p>
+              <p class="card-amp">&amp;</p>
+              <p class="card-line">Sh. Rinku Bansal</p>
+              <p class="card-city">Bathinda, Punjab</p>
+            </div>
+
+            <div class="card-amp-divider"><span></span><em>&amp;</em><span></span></div>
+
+            <div class="person">
+              <p class="card-eyebrow">वधू परिचय</p>
+              <h3 class="card-name">Dr Divya</h3>
+              <p class="card-role">The Bride</p>
+              <p class="card-line">D/o. Smt. Anu Singla</p>
+              <p class="card-amp">&amp;</p>
+              <p class="card-line">Sh. Ramesh Kumar Singla</p>
+              <p class="card-city">Mansa, Punjab</p>
+            </div>
+
+            <div class="card-blessing">
+              <div class="star-divider"><span></span>✦<span></span></div>
+              <p>सर्वे भवन्तु सुखिनः — May all be happy.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Lotus divider -->
+        <div class="lotus-divider">
+          <span class="ld-line"></span>
+          <div class="ld-icons">
+            <svg class="ld-leaf" viewBox="0 0 512 512"><use href="#lotusLeaf" /></svg>
+            <svg class="ld-bloom" viewBox="0 0 256 256"><use href="#lotusBloom" /></svg>
+            <svg class="ld-leaf" viewBox="0 0 512 512"><use href="#lotusLeaf" /></svg>
+          </div>
+          <span class="ld-line"></span>
+        </div>
+
+        <!-- ===== Section 3: Countdown + Scratch to reveal ===== -->
+        <section class="section countdown-section">
+          <p class="until">UNTIL TWO SOULS BECOME ONE</p>
+
+          <div class="countdown" id="countdown">
+            <div class="cd-item">
+              <div class="cd-box">
+                <span class="br tl"></span><span class="br tr"></span><span class="br bl"></span><span class="br br"></span>
+                <span class="cd-num" id="cdDays">00</span>
+              </div>
+              <span class="cd-label">Days</span>
+            </div>
+            <div class="cd-sep"><span></span><span></span></div>
+            <div class="cd-item">
+              <div class="cd-box">
+                <span class="br tl"></span><span class="br tr"></span><span class="br bl"></span><span class="br br"></span>
+                <span class="cd-num" id="cdHours">00</span>
+              </div>
+              <span class="cd-label">Hours</span>
+            </div>
+            <div class="cd-sep"><span></span><span></span></div>
+            <div class="cd-item">
+              <div class="cd-box">
+                <span class="br tl"></span><span class="br tr"></span><span class="br bl"></span><span class="br br"></span>
+                <span class="cd-num" id="cdMins">00</span>
+              </div>
+              <span class="cd-label">Minutes</span>
+            </div>
+            <div class="cd-sep"><span></span><span></span></div>
+            <div class="cd-item">
+              <div class="cd-box">
+                <span class="br tl"></span><span class="br tr"></span><span class="br bl"></span><span class="br br"></span>
+                <span class="cd-num" id="cdSecs">00</span>
+              </div>
+              <span class="cd-label">Seconds</span>
+            </div>
+          </div>
+
+          <div class="scratch-wrap">
+            <div class="heart-reveal">
+              <div class="reveal-content">
+                <p class="reveal-day" id="revealDay">WEDNESDAY</p>
+                <p class="reveal-date" id="revealDate">11 NOV 2026</p>
+                <p class="reveal-time">8:00 PM Onwards</p>
+              </div>
+              <canvas class="scratch-canvas" id="scratchCanvas"></canvas>
+            </div>
+          </div>
+
+          <p class="reveal-hint">Go on… reveal the date of our special day ✨</p>
+          <a class="calendar-btn" id="calendarBtn" href="#">
+            <span class="cal-shimmer"></span>
+            <svg class="cal-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            <span class="cal-text">ADD TO CALENDAR</span>
+          </a>
+        </section>
+
+        <!-- Lotus divider -->
+        <div class="lotus-divider">
+          <span class="ld-line"></span>
+          <div class="ld-icons">
+            <svg class="ld-leaf" viewBox="0 0 512 512"><use href="#lotusLeaf" /></svg>
+            <svg class="ld-bloom" viewBox="0 0 256 256"><use href="#lotusBloom" /></svg>
+            <svg class="ld-leaf" viewBox="0 0 512 512"><use href="#lotusLeaf" /></svg>
+          </div>
+          <span class="ld-line"></span>
+        </div>
+
+        <!-- ===== Section 4: Our Story ===== -->
+        <section class="story-section">
+          <div class="story-wrap">
+            <div class="story-head">
+              <p class="story-eyebrow">How It All Began</p>
+              <h2 class="story-title">Our Story</h2>
+              <div class="story-star"><span></span>✦<span></span></div>
+              <p class="story-intro">Some love stories are written in the stars — ours began with a single glance across a crowded room and has only grown more beautiful with every passing season.</p>
+            </div>
+
+            <div class="story-grid">
+              <div class="story-photo">
+                <span class="pc tl"></span><span class="pc tr"></span><span class="pc bl"></span><span class="pc br"></span>
+                <div class="photo-frame">
+                  <img src="9b13f4a6-15ac-4dbf-b629-10c3c607f6fa.png" alt="Shubham &amp; Divya" />
+                  <div class="photo-fade"></div>
+                </div>
+                <div class="name-plate">Shubham <em>&amp;</em> Dr Divya</div>
+              </div>
+
+              <div class="story-timeline">
+                <div class="chapter">
+                  <div class="chapter-marker"><span class="dot"></span><span class="line"></span></div>
+                  <div class="chapter-body">
+                    <span class="chapter-label">Chapter One</span>
+                    <h4 class="chapter-title">The Meeting</h4>
+                    <p class="chapter-text">Two families met — and two hearts quietly recognised each other.</p>
+                  </div>
+                </div>
+                <div class="chapter">
+                  <div class="chapter-marker"><span class="dot"></span><span class="line"></span></div>
+                  <div class="chapter-body">
+                    <span class="chapter-label">Chapter Two</span>
+                    <h4 class="chapter-title">The Knowing</h4>
+                    <p class="chapter-text">Slow conversations turned into the certainty of finding the right person.</p>
+                  </div>
+                </div>
+                <div class="chapter">
+                  <div class="chapter-marker"><span class="dot"></span><span class="line"></span></div>
+                  <div class="chapter-body">
+                    <span class="chapter-label">Chapter Three</span>
+                    <h4 class="chapter-title">The Promise</h4>
+                    <p class="chapter-text">With blessings all around, a connection became a forever promise.</p>
+                  </div>
+                </div>
+                <div class="chapter">
+                  <div class="chapter-marker"><span class="dot"></span></div>
+                  <div class="chapter-body">
+                    <span class="chapter-label">Chapter Four</span>
+                    <h4 class="chapter-title">Forever Begins</h4>
+                    <p class="chapter-text">Surrounded by love, the most beautiful chapter of our lives begins.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Lotus divider -->
+        <div class="lotus-divider">
+          <span class="ld-line"></span>
+          <div class="ld-icons">
+            <svg class="ld-leaf" viewBox="0 0 512 512"><use href="#lotusLeaf" /></svg>
+            <svg class="ld-bloom" viewBox="0 0 256 256"><use href="#lotusBloom" /></svg>
+            <svg class="ld-leaf" viewBox="0 0 512 512"><use href="#lotusLeaf" /></svg>
+          </div>
+          <span class="ld-line"></span>
+        </div>
+
+        <!-- ===== Section 5: The Celebrations ===== -->
+        <section class="celebrations-section">
+          <div class="cel-wrap">
+            <div class="cel-head">
+              <p class="cel-eyebrow">Join Us In Celebration</p>
+              <h2 class="cel-title">The Celebrations</h2>
+              <div class="cel-title-divider"><span></span><i></i><span></span></div>
+            </div>
+
+            <div class="cel-list">
+              <!-- Baraat -->
+              <article class="cel-card">
+                <div class="cel-photo baraat"><img src="baraat.webp" alt="Baraat" loading="lazy" onerror="this.style.display='none'" /></div>
+                <div class="cel-content">
+                  <div class="cel-daterow"><span class="cel-line"></span><span class="cel-date">Wednesday &nbsp;·&nbsp; November 11, 2026</span></div>
+                  <h3 class="cel-name">Baraat</h3>
+                  <p class="cel-desc">Dhol, colours &amp; a royal entrance to remember.</p>
+                  <div class="cel-details">
+                    <div class="cel-detail">
+                      <p class="cel-detail-label">As The Evening Begins</p>
+                      <p class="cel-detail-value">8:00 PM Onwards</p>
+                    </div>
+                    <span class="cel-detail-sep"></span>
+                    <div class="cel-detail">
+                      <p class="cel-detail-label">Through The Royal Gates</p>
+                      <p class="cel-detail-value">Main Entrance Procession</p>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- Lotus divider -->
+        <div class="lotus-divider">
+          <span class="ld-line"></span>
+          <div class="ld-icons">
+            <svg class="ld-leaf" viewBox="0 0 512 512"><use href="#lotusLeaf" /></svg>
+            <svg class="ld-bloom" viewBox="0 0 256 256"><use href="#lotusBloom" /></svg>
+            <svg class="ld-leaf" viewBox="0 0 512 512"><use href="#lotusLeaf" /></svg>
+          </div>
+          <span class="ld-line"></span>
+        </div>
+
+        <!-- ===== Section 6: The Venue ===== -->
+        <section class="venue-section">
+          <div class="venue-wrap">
+            <div class="cel-head">
+              <p class="cel-eyebrow">Find Your Way To Us</p>
+              <h2 class="cel-title">The Venue</h2>
+              <div class="cel-title-divider"><span></span><i></i><span></span></div>
+              <p class="venue-name">Sky Heights Resort, Bathinda, Punjab</p>
+            </div>
+
+            <a class="venue-map" href="https://maps.google.com/?q=Sky+Heights+Resort+Bathinda" target="_blank" rel="noopener noreferrer">
+              <span class="vm-corner tl"></span><span class="vm-corner tr"></span><span class="vm-corner bl"></span><span class="vm-corner br"></span>
+              <iframe
+                src="https://www.google.com/maps?q=Sky+Heights+Resort+Bathinda&output=embed"
+                width="100%" height="420" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Wedding Venue — Sky Heights Resort, Bathinda"></iframe>
+              <span class="venue-tint"></span>
+              <span class="venue-hover"><span class="venue-hover-text">Get Directions</span></span>
+            </a>
+          </div>
+        </section>
+
+        <!-- Lotus divider -->
+        <div class="lotus-divider">
+          <span class="ld-line"></span>
+          <div class="ld-icons">
+            <svg class="ld-leaf" viewBox="0 0 512 512"><use href="#lotusLeaf" /></svg>
+            <svg class="ld-bloom" viewBox="0 0 256 256"><use href="#lotusBloom" /></svg>
+            <svg class="ld-leaf" viewBox="0 0 512 512"><use href="#lotusLeaf" /></svg>
+          </div>
+          <span class="ld-line"></span>
+        </div>
+
+        <!-- ===== Footer ===== -->
+        <footer class="site-footer">
+          <div class="footer-inner">
+            <h2 class="footer-names">Shubham <em>&amp;</em> Dr Divya</h2>
+            <div class="footer-divider"><span></span><i></i><span></span></div>
+            <p class="footer-blessing">शुभं भवतु</p>
+
+            <div class="footer-regards">
+              <p class="regards-label">With Warm Regards</p>
+              <p class="regards-family">Bansal Family</p>
+              <p class="regards-name">Jai Ram Dass Budh Ram</p>
+              <p class="regards-name">Ganga Maiya Rice Mills</p>
+              <p class="regards-name">Mahadev Industries</p>
+              <p class="regards-name">Shri Balaji Allucan LLP</p>
+              <p class="regards-name">Shri Tirupati Plastocans Pvt Ltd</p>
+            </div>
+          </div>
+        </footer>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Background music (starts when doors open) -->
+  <audio id="bgMusic" src="Tum%20Ho%20Toh%20Saiyaara%20320%20Kbps.mp3" loop preload="auto"></audio>
+  <button id="musicToggle" class="music-toggle" aria-label="Play or pause music" hidden>
+    <span class="mt-bars"><i></i><i></i><i></i></span>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
